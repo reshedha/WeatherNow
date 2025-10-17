@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <title>WeatherNow</title>
+</head>
+<body>
+     <div class="nav-part">
+        <h1>weatherNow</h1>
+     </div>
+     <% if(locals.bgcoloring){ %>
+   <div class="actmain" style="<%=locals.bgcoloring%>" >
+    <div class="main-part">
+    <form action="/submit" method="post" class="box1" >
+        <input placeholder="enter your city" type="text" name="city" class="ip1">
+        <input placeholder="enter the country" type="text"name="country" class="ip2">
+        <button type="submit" value="submit" class="submit-btn" >submit</button>
+    </form>
+   
+    <% if(locals.weather && locals.color){ %>
+        <% console.log(weather,color);%>
+        <div class="box2" style=<%= color %> >
+            <div class="temph">
+                <h2><%=weather.city%></h2>
+                <%=weather.temperature%>°</div>
+            <div class="box2-sub">
+                <div class="pressh"><h2>pressure</h2>
+                    <%=weather.pressure%>hPa</div>
+                <div class="humidh">
+                    <h2>humidity</h2><%=weather.humidity%>%</div>
+                <div class="visibh">
+                    <h2>visibility</h2>
+                    <%=weather.visibility%>km</div>
+            </div>
+        </div>
+    <% } else if(locals.warning){ %>
+        <div class="box3">
+            <div class="warningh"><%=warning %></div>
+        </div>
+        
+    <%}%>
+    </div>
+   </div>
+   <%}%>
+    <script src="theme.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

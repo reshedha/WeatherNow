@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Inconsolata", monospace;
+}
+body{
+        background-color:#373737;
+}
+.nav-part{
+    display:flex;
+    background-color: #373737;
+    height:12vmin;
+    width:100vw;
+    padding:3vmin;
+    margin:0;
+}
+.nav-part h1{
+    color:white;
+    font-size:4vmin;
+}
+.actmain{
+    margin:0;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:row;
+    align-content:center;
+}
+.main-part{
+    margin:10vmin auto 0 auto;
+    width:100vw;
+    height:80vw;
+    display:flex;
+    padding:15vmin;
+    align-content:center;
+}
+.box1{
+    background-color: #373737;
+    height:40vmin;
+    width:35vw;
+    padding:5vmin;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-content:center;
+    gap:1rem;
+}
+.ip1,.ip2{
+    height:7vmin;
+    border-radius:1vmin;
+    font-size:2vmin;
+
+}
+.submit-btn{
+    width:12vmin;
+    height:6vmin;
+    border-radius:1vmin;
+    font-size:2vmin;
+
+}
+.box2{
+    height:40vmin;
+    width:35vw;
+    padding:7vmin;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items:center;
+    background-color: #373737;
+}
+
+.box2-sub{
+    display:flex;
+    justify-content:space-around;
+    gap:4vmin;
+    color:white;
+}
+.temph{
+    color:white;
+    font-size:5vmin;
+}
+.temph h2{
+    font-size:6vmin;
+    display:block;
+    text-align:center;
+    margin:2vmin;
+}
+ .box1 h2{
+        font-size:2vmin;
+    }
+     .box2 h2{
+        font-size:2vmin;
+    } 
+    .box3 h2{
+        font-size:2vmin;
+    }
+.pressh,.humidh,.visibh{
+    font-size:3.5vmin;
+}
+.box3{
+    background-color: #373737;
+    color:white;
+    padding:10vmin;
+    text-align: center;
+    font-size:4vmin;
+    display:flex;
+    width:30vw;
+    height:40vmin;
+    gap:5vmin;
+}
+@media (max-width:600px) {
+    .nav-part{
+        height:20vmin;
+        width:100vw;
+        padding:4vmin;
+    }
+    .nav-part h1{
+        font-size:7vmin;
+    }
+    .submit-btn{
+        height:8vmin;
+        width:15vmin;
+        font-size:3vmin;
+    }
+    .ip1,.ip2{
+        height:10vmin;
+    }
+.actmain{
+    flex-direction:column;
+}
+    .main-part {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        align-items: center;
+        margin: 0;
+        padding: 10vmin;
+    }
+    .box1,
+    .box2,
+    .box3 {
+        width: 60vw;
+        min-width: 0;
+        padding: 5vmin;
+        box-sizing: border-box;
+    }
+    .box2-sub{
+        gap:3vmin;
+    }
+    .box1 h2{
+        font-size:3vmin;
+    }
+     .box2 h2{
+        font-size:3vmin;
+    } 
+    .box3 h2{
+        font-size:3vmin;
+    }
+
+.pressh,.humidh,.visibh{
+    font-size:4vmin;
+}
+}
